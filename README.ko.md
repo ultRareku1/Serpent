@@ -4,12 +4,6 @@
 
 Apple Silicon Mac을 위한 간결한 네이티브 스네이크 게임입니다. SwiftUI, AppKit, AVFoundation으로 제작했으며, 실행 시 타사 라이브러리가 필요하지 않고 네트워크 요청도 보내지 않습니다.
 
-## 시작하기
-
-`dist/Serpent.app`을 열거나 `dist/Serpent-Apple-Silicon.zip`의 압축을 풀어 주세요. 앱을 응용 프로그램 폴더로 드래그해 옮길 수 있습니다. macOS 13 Ventura 이상을 실행하는 M 시리즈 Mac이 필요합니다.
-
-로컬 빌드에는 ad-hoc 서명이 적용되어 있지만, Apple Developer ID를 통한 공증은 받지 않았습니다. 다른 Mac에서 다운로드한 뒤 macOS가 앱 실행을 차단하면, 시스템 안내에 따라 실행을 허용해 주세요.
-
 ## 조작 방법
 
 | 동작 | 조작 |
@@ -69,6 +63,8 @@ swift run Serpent
 ```
 
 패키징 스크립트는 arm64 앱과 ZIP 파일을 만든 뒤 앱의 서명을 검증합니다. 디스크 이미지도 만들려면 `BUILD_DMG=1 ./Scripts/build-app.sh`를 실행하세요.
+
+로컬 빌드에는 ad-hoc 서명이 적용되어 있지만, Apple Developer ID를 통한 공증은 받지 않았습니다. 다른 Mac에서 다운로드한 뒤 macOS가 앱 실행을 차단하면, 시스템 안내에 따라 실행을 허용해 주세요.
 
 자동화된 테스트는 게임 규칙, 방향 전환 큐, 경계 조건, 자동 일시 정지, 시스템 언어 매칭, 8개 언어 전체의 번역 완전성을 검증합니다.
 

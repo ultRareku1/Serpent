@@ -4,12 +4,6 @@
 
 Serpent 是一款面向 Apple Silicon Mac 的原生极简贪吃蛇游戏，使用 SwiftUI、AppKit 和 AVFoundation 开发，无第三方运行时依赖，不发起网络请求。
 
-## 开始使用
-
-打开 `dist/Serpent.app`，或先解压 `dist/Serpent-Apple-Silicon.zip`。你可以将应用拖入“应用程序”文件夹。需要搭载 M 系列芯片的 Mac，系统为 macOS 13 Ventura 或更高版本。
-
-本地构建采用临时签名（ad-hoc），尚未经过 Apple Developer ID 公证。如果在另一台 Mac 下载后，macOS 阻止应用打开，请按照系统提示允许应用运行。
-
 ## 操作方式
 
 | 操作 | 按键或手势 |
@@ -69,6 +63,8 @@ swift run Serpent
 ```
 
 打包脚本会生成 arm64 应用和 ZIP 压缩包，并验证应用签名。执行 `BUILD_DMG=1 ./Scripts/build-app.sh` 还会生成磁盘映像。
+
+本地构建采用临时签名（ad-hoc），尚未经过 Apple Developer ID 公证。如果在另一台 Mac 下载后，macOS 阻止应用打开，请按照系统提示允许应用运行。
 
 自动化测试覆盖游戏规则、转向队列、边界情况、自动暂停、系统语言匹配，以及八种语言的本地化完整性。
 

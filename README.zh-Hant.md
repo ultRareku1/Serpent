@@ -4,12 +4,6 @@
 
 為 Apple Silicon Mac 打造的原生極簡貪吃蛇遊戲，使用 SwiftUI、AppKit 與 AVFoundation 開發。執行時不依賴第三方套件，也不會發出網路請求。
 
-## 開始使用
-
-開啟 `dist/Serpent.app`，或解壓縮 `dist/Serpent-Apple-Silicon.zip`。你可以將應用程式拖曳至「應用程式」資料夾。需要搭載 M 系列晶片的 Mac，並執行 macOS 13 Ventura 或更新版本。
-
-本機建置的版本採用 ad hoc 簽署，尚未透過 Apple Developer ID 完成公證。如果在另一台 Mac 下載後遭到 macOS 阻擋，請依照系統提示允許開啟。
-
 ## 操作方式
 
 | 動作 | 操作 |
@@ -69,6 +63,8 @@ swift run Serpent
 ```
 
 封裝腳本會建立 arm64 應用程式與 ZIP 壓縮檔，接著驗證應用程式簽署。執行 `BUILD_DMG=1 ./Scripts/build-app.sh` 還可產生磁碟映像檔。
+
+本機建置的版本採用 ad hoc 簽署，尚未透過 Apple Developer ID 完成公證。如果在另一台 Mac 下載後遭到 macOS 阻擋，請依照系統提示允許開啟。
 
 自動化測試涵蓋遊戲規則、轉向佇列、邊界情況、自動暫停、系統語言比對，以及八種語言的翻譯完整性。
 

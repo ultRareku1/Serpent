@@ -4,12 +4,6 @@
 
 Ein natives, minimalistisches Snake-Spiel für Macs mit Apple Silicon, entwickelt mit SwiftUI, AppKit und AVFoundation. Keine Laufzeitabhängigkeiten von Drittanbietern und keine Netzwerkanfragen.
 
-## Erste Schritte
-
-Öffne `dist/Serpent.app` oder entpacke `dist/Serpent-Apple-Silicon.zip`. Du kannst die App in deinen Programme-Ordner ziehen. Erforderlich ist ein Mac mit Chip der M-Serie und macOS 13 Ventura oder neuer.
-
-Die lokal erstellte Version ist ad hoc signiert und wurde nicht mit einer Apple Developer ID notarisiert. Falls macOS die App nach dem Herunterladen auf einem anderen Mac blockiert, folge den Systemhinweisen, um das Öffnen zu erlauben.
-
 ## Steuerung
 
 | Aktion | Steuerung |
@@ -69,6 +63,8 @@ swift run Serpent
 ```
 
 Das Paketierungsskript erstellt eine arm64-App und ein ZIP-Archiv und überprüft anschließend die Signatur der App. Führe `BUILD_DMG=1 ./Scripts/build-app.sh` aus, um zusätzlich ein Disk-Image zu erstellen.
+
+Die lokal erstellte Version ist ad hoc signiert und wurde nicht mit einer Apple Developer ID notarisiert. Falls macOS die App nach dem Herunterladen auf einem anderen Mac blockiert, folge den Systemhinweisen, um das Öffnen zu erlauben.
 
 Automatisierte Tests prüfen die Spielregeln, die Warteschlange für Richtungswechsel, Grenzfälle, das automatische Pausieren, die Zuordnung der Systemsprache und die Vollständigkeit der Übersetzungen in allen acht Sprachen.
 
